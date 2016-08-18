@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Lose Yourself - Tracking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h1>Weigh in</h1>
+            <p>
+                Let's see how great you've been doing!
+            </p>
+            <form method="post">
+                <input id="weight" class="input-small" name="WI" type="text" placeholder="Enter Weight">
+                <button id="submit" class="btn btn-success" name="submit" type="submit" formaction='@Url.Action("WeighIn", "User")'>Go!</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-md-offset-1">    
+    </div>
+</div>

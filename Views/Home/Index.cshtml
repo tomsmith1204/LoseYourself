@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h1>What's this?</h1>
+            <p>
+                Welcome to LoseYourself&mdash;a web application designed to help people acheive and measure their weight loss progress.
+            </p>
+            @Html.ActionLink("Join Now!", "Register", "User", null, new { @class = "btn btn-primary btn-large" })
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="center-row">
+            <span class="bracket">{</span>
+            <span class="git">
+                Get the source code from <a href="https://github.com/tomsmith1204/LoseYourself" target="_blank"><img src="~/Content/Images/GitHub_Logo.png" alt="github logo"></a>.
+            </span>
+            <span class="bracket">}</span><br />
+            This software is offered free of charge under <br />Creative Commons Attribution 3.0 United States <a href="https://creativecommons.org/licenses/by/3.0/us/">(CC BY 3.0 US)</a>
+        </div>
+    </div>
+</div>

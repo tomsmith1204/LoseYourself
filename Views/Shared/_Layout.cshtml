@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/Chart.js")
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+   
+   
+    <!--Scripts-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+</head>
+<body>
+    <!--Navigation and logo-->
+    <!-- TODO collapse nav -->
+    <div class="logo-bg">
+        <span>
+            <mark class="white">
+                Lose
+            </mark>
+            Yourself
+        </span>
+        <div class="tagline">
+            A fitness application for life.
+        </div>
+    </div>
+    <div class="nav-bg">
+        @if (@Session["Username"] != null)
+        {
+            @Html.ActionLink("Home", "Index", "Home")
+            @Html.ActionLink("Dashboard", "Dashboard", "User")
+            @Html.ActionLink("Weigh in", "WeighIn", "User")
+            @Html.ActionLink("About", "About", "Home")
+            
+            <span class="user-session-false">
+                Welcome, @Session["Username"]! @Html.ActionLink(" (Logout)", "Logout", "User")
+            </span>
+        }
+        else
+        {
+            <span>
+                No Account? @Html.ActionLink("Register here!", "Register", "User")
+            </span>
+                <form method="post" class="user-session form-horizontal nav-login-form">
+                    <input id="username" class="input-small" name="n" type="text" placeholder="Username">
+                    <input id="password" class="input-small" name="p" type="password" placeholder="Password">
+                    <button id="submit" class="btn btn-success btn-xs nav-login-btn" name="submit" type="submit" formaction='@Url.Action("Login", "User")'>Login!</button>
+                </form>
+        }
+    </div>
+
+    <!--Display body content from View-->
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Thomas Smith</p>
+        </footer>
+    </div>
+
+</body>
+</html>

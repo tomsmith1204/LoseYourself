@@ -1,0 +1,10 @@
+﻿@{
+    const string Canvas = "Trends";
+    var complexChart = new LineChart();
+    complexChart.ComplexData.Labels.AddRange(ChartModels.Labels);
+    complexChart.ComplexData.Datasets.AddRange(ChartModels.Datasets);
+}
+<h3>@Canvas</h3>
+<canvas id="@Canvas" width="600" height="400"></canvas>
+
+@Html.CreateChart(Canvas, complexChart)

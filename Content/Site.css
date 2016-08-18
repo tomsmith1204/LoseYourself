@@ -1,0 +1,135 @@
+﻿body { 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.logo-bg {
+    background-color: #418AB3;
+    height: 8em;
+    position:relative;
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+.logo-bg span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    font-size:36pt;
+}
+
+mark {
+    padding: 0px 0px 0px 0px;
+    margin: 0px -17px 0px 5px;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.tagline {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+
+    
+}
+.nav-bg {
+    background-color: #A6B727;
+    height: 2.5em;
+    border-bottom: solid 3px;
+    border-bottom-color: #2E2E2E;
+    padding: 5px 0px 0px 10px;
+}
+ 
+.nav-bg a {
+     color: #2e2e2e;
+     padding-right: 10px
+}
+
+.nav-bg a:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.user-session-false {
+    float: right; 
+}
+
+.user-session {
+    float:right;
+    padding-right: 8px;
+}
+
+.top-padding {
+    padding-top: 5px;
+}
+
+.nav-login-form {
+    padding-top: -70px;
+}
+.nav-login-btn {
+    margin-bottom: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+
+#canvas-label-trends {
+    padding-top:10px;
+}
+
+.dash-calc-row {
+    padding-left:100px;
+}
+
+.bracket {
+    font-size: 22pt;
+    font-weight:900;
+}
+
+.center-row {
+    text-align:center;
+}
+
+.td-blue {
+    background-color: #418AB3;
+    color: #FFF;
+    text-align:center;
+}
+
+.td-green {
+    background-color: #A6B727;
+    color: #FFF;
+    text-align:center;
+}
+
+/*Other colors
+    lighter grey: #2E2E2E
+    darker gray: #1E1E1E
+*/
+
+
+
+
+
+
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
